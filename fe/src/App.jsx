@@ -11,7 +11,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false); // For loading state
   const navigate = useNavigate();
 
-  const iconStyle = { width: "18px", height: "18px", marginLeft: "8px" };
+  // const iconStyle = { width: "18px", height: "18px", marginLeft: "8px" };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -36,7 +36,7 @@ const Home = () => {
 
     try {
       // Make the API call to your backend
-      const response = await axios.post("http://localhost:3000/roast-resume", formData);
+      const response = await axios.post("https://slay-my-cv.onrender.com/roast-resume", formData);
       
       // On success, navigate to the response page with the roast data
       navigate("/response", { state: { roastData: response.data.roast } });
