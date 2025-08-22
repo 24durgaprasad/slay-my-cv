@@ -1,0 +1,527 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Enhanced File Upload Styles */
+.file-upload-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.file-upload-box {
+  position: relative;
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(75, 85, 99, 0.3);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-upload-box:hover {
+  border-color: rgba(147, 51, 234, 0.5);
+  background: rgba(17, 24, 39, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.2);
+}
+
+.upload-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-text h3 {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Response Display Enhancements */
+.roast-response {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.roast-response::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #ef4444, #ec4899, #8b5cf6);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
+
+/* ChatGPT/Gemini-style response formatting */
+.roast-content {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #e5e7eb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  max-width: none;
+  letter-spacing: 0.01em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Clean heading styles like ChatGPT */
+.roast-content h1 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 2rem 0 1.5rem 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.roast-content h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.roast-content h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.roast-content h4, .roast-content h5, .roast-content h6 {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 1.25rem 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+/* Clean paragraph styling */
+.roast-content p {
+  margin-bottom: 1.5rem;
+  color: #e5e7eb;
+  line-height: 1.8;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+/* Remove special first paragraph styling */
+.roast-content p:first-of-type {
+  font-size: 1rem;
+  color: #e5e7eb;
+  font-weight: 400;
+  text-align: left;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+}
+
+/* Clean emphasis styling */
+.roast-content strong {
+  color: #ffffff;
+  font-weight: 600;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.roast-content em {
+  color: #e5e7eb;
+  font-style: italic;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Clean list styling like ChatGPT */
+.roast-content ul, .roast-content ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  background: none;
+  border-radius: 0;
+  border: none;
+}
+
+.roast-content li {
+  margin-bottom: 0.75rem;
+  color: #e5e7eb;
+  position: relative;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.roast-content li::marker {
+  color: #9ca3af;
+}
+
+/* Clean blockquote styling */
+.roast-content blockquote {
+  border-left: 3px solid #4b5563;
+  margin: 1.5rem 0;
+  background: rgba(75, 85, 99, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  position: relative;
+  font-style: normal;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.roast-content blockquote::before {
+  display: none;
+}
+
+/* Clean code styling */
+.roast-content code {
+  background: rgba(55, 65, 81, 0.8);
+  color: #f9fafb;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.375rem;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.roast-content pre {
+  background: rgba(55, 65, 81, 0.8);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.roast-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Simple dividers */
+.roast-content hr {
+  border: none;
+  height: 1px;
+  background: #4b5563;
+  margin: 2.5rem 0;
+  border-radius: 0;
+}
+
+/* Add visual separation between sections */
+.roast-content h2 + p,
+.roast-content h3 + p {
+  margin-top: 0.75rem;
+}
+
+/* Better spacing for numbered sections */
+.roast-content h2 {
+  border-top: 1px solid #374151;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.roast-content h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1.5rem;
+}
+
+/* Improve readability with better text formatting */
+.roast-content {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Clean table styling */
+.roast-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: none;
+  border-radius: 0;
+}
+
+.roast-content th,
+.roast-content td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #4b5563;
+}
+
+.roast-content th {
+  background: rgba(75, 85, 99, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Numbered sections styling */
+.roast-content h2:before {
+  content: counter(section);
+  counter-increment: section;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-right: 0.75rem;
+}
+
+.roast-content {
+  counter-reset: section;
+}
+
+/* Remove the numbered styling for now - keeping it clean */
+.roast-content h2:before {
+  display: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar h1.logo {
+    font-size: 2.5rem !important;
+    width: 90% !important;
+    padding: 1rem !important;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    padding: 1rem;
+    gap: 2rem !important;
+  }
+
+  /* File upload container */
+  .file-upload-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .file-upload-box {
+    padding: 1.5rem;
+    min-height: 180px;
+    margin: 0 1rem;
+  }
+
+  .upload-text h3 {
+    font-size: 1.25rem;
+  }
+
+  .upload-text p {
+    font-size: 0.9rem;
+  }
+
+  /* Submit button adjustments */
+  .submit-button {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding: 1rem 2rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Response page adjustments */
+  .roast-response {
+    margin: 0 0.5rem;
+    padding: 1.5rem !important;
+  }
+
+  .roast-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .roast-content h1 {
+    font-size: 1.5rem !important;
+    margin: 1.5rem 0 1rem 0 !important;
+  }
+
+  .roast-content h2 {
+    font-size: 1.25rem !important;
+    margin: 1.5rem 0 0.75rem 0 !important;
+  }
+
+  .roast-content h3 {
+    font-size: 1.1rem !important;
+    margin: 1.25rem 0 0.5rem 0 !important;
+  }
+
+  .roast-content ul, .roast-content ol {
+    padding-left: 1.25rem !important;
+  }
+
+  .roast-content blockquote {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Action buttons responsive */
+  .flex.justify-center.space-x-4 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .flex.justify-center.space-x-4 button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .navbar h1.logo {
+    font-size: 2rem !important;
+    padding: 0.75rem !important;
+  }
+
+  .file-upload-box {
+    padding: 1rem;
+    margin: 0 0.5rem;
+    min-height: 160px;
+  }
+
+  .upload-icon-container .w-16.h-16 {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .upload-icon-container .w-8.h-8 {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+
+  .submit-button {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem);
+    padding: 0.875rem 1.5rem !important;
+  }
+
+  .roast-response {
+    margin: 0 0.25rem;
+    padding: 1rem !important;
+  }
+
+  .roast-content {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .roast-content h1 {
+    font-size: 1.4rem !important;
+    margin: 1.25rem 0 0.75rem 0 !important;
+  }
+
+  .roast-content h2 {
+    font-size: 1.15rem !important;
+    margin: 1.25rem 0 0.5rem 0 !important;
+  }
+
+  .roast-content h3 {
+    font-size: 1rem !important;
+    margin: 1rem 0 0.5rem 0 !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar h1.logo {
+    font-size: 3.5rem !important;
+    width: 80% !important;
+  }
+
+  .file-upload-container {
+    max-width: 500px;
+  }
+
+  .roast-response {
+    padding: 2rem !important;
+  }
+}
